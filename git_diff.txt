@@ -1,0 +1,29 @@
+(addsr) sysadm@gpuserver4:~/Sourish/Codes/addsr/AddSR$ git diff
+diff --git a/preset/addsr/scaler.pt b/preset/addsr/scaler.pt
+index 73bd728..435ad4d 100644
+Binary files a/preset/addsr/scaler.pt and b/preset/addsr/scaler.pt differ
+diff --git a/preset/models/stable-diffusion-2-base/model_index.json b/preset/models/stable-diffusion-2-base/model_index.json
+index 0f48b22..04108af 100644
+--- a/preset/models/stable-diffusion-2-base/model_index.json
++++ b/preset/models/stable-diffusion-2-base/model_index.json
+@@ -1,6 +1,6 @@
+ {
+   "_class_name": "StableDiffusionPipeline",
+-  "_diffusers_version": "0.10.0.dev0",
++  "_diffusers_version": "0.8.0",
+   "feature_extractor": [
+     "transformers",
+     "CLIPImageProcessor"
+diff --git a/utils/__pycache__/devices.cpython-38.pyc b/utils/__pycache__/devices.cpython-38.pyc
+index 127a3bf..785f475 100644
+Binary files a/utils/__pycache__/devices.cpython-38.pyc and b/utils/__pycache__/devices.cpython-38.pyc differ
+diff --git a/utils/__pycache__/misc.cpython-38.pyc b/utils/__pycache__/misc.cpython-38.pyc
+index 1a68a60..1862a52 100644
+Binary files a/utils/__pycache__/misc.cpython-38.pyc and b/utils/__pycache__/misc.cpython-38.pyc differ
+diff --git a/utils/__pycache__/vaehook.cpython-38.pyc b/utils/__pycache__/vaehook.cpython-38.pyc
+index 7ea22b8..9b0118e 100644
+Binary files a/utils/__pycache__/vaehook.cpython-38.pyc and b/utils/__pycache__/vaehook.cpython-38.pyc differ
+diff --git a/utils/__pycache__/wavelet_color_fix.cpython-38.pyc b/utils/__pycache__/wavelet_color_fix.cpython-38.pyc
+index d5c44e1..c1cede9 100644
+Binary files a/utils/__pycache__/wavelet_color_fix.cpython-38.pyc and b/utils/__pycache__/wavelet_color_fix.cpython-38.pyc differ
+
