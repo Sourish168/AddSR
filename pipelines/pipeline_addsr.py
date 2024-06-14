@@ -54,8 +54,13 @@ logger = logging.get_logger(__name__)  # pylint: disable=invalid-name
 from ram.models.ram_lora import ram
 from ram import get_transform
 
-RAM = ram(pretrained='/home/amax/workspace/ruixie/SeeSR/preset/ram_swin_large_14m.pth',
-            pretrained_condition='/home/amax/workspace/ruixie/SeeSR/preset/models/DAPE.pth',
+# RAM = ram(pretrained='/home/amax/workspace/ruixie/SeeSR/preset/ram_swin_large_14m.pth',
+#            pretrained_condition='/home/amax/workspace/ruixie/SeeSR/preset/models/DAPE.pth',
+#            image_size=384,
+#            vit='swin_l')
+
+RAM = ram(pretrained='./preset/ram_swin_large_14m.pth',
+            pretrained_condition='./preset/models/DAPE.pth',
             image_size=384,
             vit='swin_l')
 RAM.eval()

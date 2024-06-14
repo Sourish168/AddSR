@@ -14,7 +14,7 @@ from safetensors.torch import load_model
 from accelerate import Accelerator
 from accelerate.logging import get_logger
 from accelerate.utils import set_seed
-from diffusers import AutoencoderKL, DDPMScheduler
+from diffusers import AutoencoderKL # , DDPMScheduler
 from diffusers.utils import check_min_version
 from diffusers.utils.import_utils import is_xformers_available
 from transformers import CLIPTextModel, CLIPTokenizer, CLIPImageProcessor
@@ -32,6 +32,8 @@ from torchvision import transforms
 import torch.nn as nn
 import torch.nn.functional as F
 from torchvision import transforms
+
+from utils.scheduling_ddpm import DDPMScheduler
 
 logger = get_logger(__name__, log_level="INFO")
 
@@ -117,7 +119,7 @@ def load_addsr_pipeline(args, accelerator, enable_xformers_memory_efficient_atte
 
 def load_tag_model(args, device='cuda'):
     
-    model = ram(pretrained='/home/amax/workspace/ruixie/SeeSR/preset/ram_swin_large_14m.pth',
+    model = ram(pretrained='./preset/ram_swin_large_14m.pth',
                 pretrained_condition=args.ram_ft_path,
                 image_size=384,
                 vit='swin_l')
